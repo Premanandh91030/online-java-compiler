@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Main Motoko actor implementing a Java code snippet manager with user profiles, code submission/retrieval/deletion/search, and role-based access control via authorization mixins.",
+  "feature_evidence.json": "Feature evidence report mapping two implemented features—site rebranding to 'PREMJI COMPILER' and Scanner-based stdin support in the editor—to their affected files and test IDs.",
+  "frontend-file-summaries.txt": "JSON document containing one-sentence summaries for each frontend source file, serving as a reference for the build/planning process.",
+  "frontend/index.css": "Global Tailwind CSS stylesheet defining OKLCH-based light and dark theme CSS variables for colors, borders, and UI component tokens.",
+  "frontend/index.html": "Minimal HTML entry point that sets the browser tab title to 'PREMJI COMPILER' and mounts the React app via main.tsx.",
+  "frontend/src/App.tsx": "Defines the TanStack Router tree with login, editor, and history routes, using a useEffect-based auth guard in AuthenticatedLayout to redirect unauthenticated users.",
+  "frontend/src/components/CodeSnippetCard.tsx": "Expandable card component for displaying a saved Java code snippet with timestamp, line count, copy-to-clipboard, and delete functionality.",
+  "frontend/src/components/Layout.tsx": "Authenticated app shell with a sticky navbar branded 'PREMJI COMPILER', navigation links for Editor and History, and a user dropdown menu with logout.",
+  "frontend/src/components/ProfileSetupModal.tsx": "A modal dialog that prompts newly authenticated users to enter their display name, shown only when a user is logged in but has no saved profile.",
+  "frontend/src/hooks/useActor.ts": "A React hook that creates and caches an ICP backend actor (authenticated or anonymous) using React Query, and invalidates dependent queries whenever the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an InternetIdentityProvider and useInternetIdentity hook for managing ICP Internet Identity authentication state, including login, logout, and identity persistence via AuthClient.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for fetching and mutating user profiles and Java code snippets against the ICP backend actor, including get, save, submit, delete, and search operations.",
+  "frontend/src/index.css": "Global stylesheet that imports JetBrains Mono and Inter fonts, defines Tailwind base/component/utility layers, and sets OKLCH-based CSS custom properties for the dark-themed editor UI.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/src/pages/EditorPage.tsx": "A Java code editor page with syntax-highlighted textarea, stdin input, and code execution via Judge0 or Piston APIs, with optional ICP snippet submission for authenticated users.",
+  "frontend/src/pages/HistoryPage.tsx": "Displays a searchable, sortable list of the user's saved Java code snippets with options to delete, refresh, or navigate to the editor for new code.",
+  "frontend/src/pages/LoginPage.tsx": "Login landing page for PREMJI COMPILER that shows app features and triggers Internet Identity authentication, redirecting authenticated users to the editor.",
+  "frontend/src/utils/urlParams.ts": "Utility functions for reading, storing, and clearing URL parameters from both query strings and hash-based routes, with sessionStorage persistence support.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration defining custom editor-themed colors, fonts (Inter/JetBrains Mono), shadows, animations, and plugin setup for the PREMJI COMPILER UI.",
+  "project_state.json": "Project state metadata for PREMJI COMPILER tracking existing features, known issues (Scanner input support), architectural notes, and pending feature requests."
+}

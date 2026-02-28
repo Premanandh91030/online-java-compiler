@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Online Java compiler web app named 'PREMJI COMPILER' that simulates Java code execution on the frontend. Currently working on supporting Scanner-based user input.",
+  "architectural_notes": [
+    "JVM/JDK cannot be installed on the platform; Java execution is simulated on the frontend"
+  ],
+  "known_issues": [
+    "Scanner-based user input is not currently accepted/supported in the Java simulator"
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-update-the-site-title-name-to-premji-compiler-across-the-application-update-the-title-tag-in-frontend-index-html-update-the-logo-brand-text-in-the-navbar-layout-tsx-and-update-the-heading-branding-on-the-login-page-loginpage-tsx",
+      "title": "Update the site title/name to 'PREMJI COMPILER' across the application: update the <title> tag in frontend/index.html, update the logo/brand text in the navbar (Layout.tsx), and update the heading/branding on the login page (LoginPage.tsx).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-scanner-based-user-input-support-to-the-java-code-simulator-in-editorpage-tsx-when-the-java-code-contains-import-java-util-scanner-or-uses-scanner-for-reading-input-e-g-nextline-nextint-next-the-ui-should-display-an-input-area-or-prompt-the-user-to-provide-stdin-values-before-execution-these-stdin-values-must-be-passed-to-the-code-execution-api-piston-or-judge0-as-standard-input-so-that-scanner-nextline-scanner-nextint-and-similar-methods-return-the-user-provided-values-at-runtime",
+      "title": "Add Scanner-based user input support to the Java code simulator in EditorPage.tsx. When the Java code contains 'import java.util.Scanner' or uses 'Scanner' for reading input (e.g., nextLine(), nextInt(), next()), the UI should display an input area or prompt the user to provide stdin values before execution. These stdin values must be passed to the code execution API (Piston or Judge0) as standard input so that Scanner.nextLine(), Scanner.nextInt(), and similar methods return the user-provided values at runtime.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Support Scanner-based user input in the Java code simulator",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Set the site name/title to 'PREMJI COMPILER'",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "PREMJI COMPILER",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

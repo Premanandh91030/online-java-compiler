@@ -1,0 +1,51 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Support Scanner-based user input and rename site to PREMJI COMPILER",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update the site title/name to 'PREMJI COMPILER' across the application",
+      "acceptanceCriteria": [
+        "The browser tab title reads 'PREMJI COMPILER'",
+        "The navbar logo/brand text displays 'PREMJI COMPILER'",
+        "The login page heading/branding displays 'PREMJI COMPILER'"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the <title> tag from 'Online Java Compiler' to 'PREMJI COMPILER' to change the browser tab title"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Update the logo/brand text in the navbar from the current logo text to 'PREMJI COMPILER' to display the new site name in the authenticated app shell"
+        },
+        {
+          "path": "frontend/src/pages/LoginPage.tsx",
+          "operation": "modify",
+          "description": "Update the heading/branding text on the login landing page to display 'PREMJI COMPILER' as the application title, replacing any existing title or branding text"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add Scanner-based user input support to the Java code simulator in EditorPage.tsx",
+      "acceptanceCriteria": [
+        "A stdin/input textarea or field is visible in the editor page for users to enter input values",
+        "When code contains Scanner usage, the input field is prominently shown or highlighted",
+        "User-provided stdin values are sent to the execution API as standard input",
+        "Java code using Scanner (e.g., reading a name or number from input) correctly receives and uses the provided values",
+        "If no input is provided and Scanner is used, the execution does not hang indefinitely — a clear message or empty input is sent"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/EditorPage.tsx",
+          "operation": "modify",
+          "description": "Add a stdin input textarea to the editor UI for users to provide input values. Detect Scanner usage in the code (by checking for 'import java.util.Scanner' or 'Scanner' keyword). When Scanner is detected, prominently show or highlight the stdin input area. Include the user-provided stdin values in the execution API request payload (Judge0 or Piston) as the 'stdin' field. If no input is provided and Scanner is used, send an empty string as stdin to prevent execution from hanging. Display the stdin input area below or alongside the code textarea with a clear label (e.g., 'Standard Input (stdin)' or 'Scanner Input')."
+        }
+      ]
+    }
+  ]
+}

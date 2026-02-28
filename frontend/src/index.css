@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.375rem;
+
+    /* Light mode (not primary use case, but defined) */
+    --background: 0.18 0.01 250;
+    --foreground: 0.92 0.01 250;
+    --card: 0.22 0.01 250;
+    --card-foreground: 0.92 0.01 250;
+    --popover: 0.22 0.01 250;
+    --popover-foreground: 0.92 0.01 250;
+    --primary: 0.65 0.18 220;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.28 0.01 250;
+    --secondary-foreground: 0.85 0.01 250;
+    --muted: 0.28 0.01 250;
+    --muted-foreground: 0.58 0.02 250;
+    --accent: 0.65 0.18 220;
+    --accent-foreground: 0.98 0 0;
+    --destructive: 0.62 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.32 0.01 250;
+    --input: 0.28 0.01 250;
+    --ring: 0.65 0.18 220;
+    --chart-1: 0.65 0.18 220;
+    --chart-2: 0.72 0.16 160;
+    --chart-3: 0.78 0.14 80;
+    --chart-4: 0.68 0.20 300;
+    --chart-5: 0.70 0.18 40;
+    --sidebar: 0.16 0.01 250;
+    --sidebar-foreground: 0.92 0.01 250;
+    --sidebar-primary: 0.65 0.18 220;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.28 0.01 250;
+    --sidebar-accent-foreground: 0.85 0.01 250;
+    --sidebar-border: 0.32 0.01 250;
+    --sidebar-ring: 0.65 0.18 220;
+
+    /* Custom editor tokens */
+    --editor-bg: 0.15 0.01 250;
+    --editor-gutter: 0.20 0.01 250;
+    --editor-line: 0.25 0.01 250;
+    --editor-text: 0.88 0.01 250;
+    --editor-accent: 0.65 0.18 220;
+    --editor-green: 0.72 0.16 155;
+    --editor-orange: 0.75 0.16 55;
+    --editor-red: 0.62 0.22 25;
+    --output-bg: 0.12 0.01 250;
+  }
+
+  .dark {
+    --background: 0.18 0.01 250;
+    --foreground: 0.92 0.01 250;
+    --card: 0.22 0.01 250;
+    --card-foreground: 0.92 0.01 250;
+    --popover: 0.22 0.01 250;
+    --popover-foreground: 0.92 0.01 250;
+    --primary: 0.65 0.18 220;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.28 0.01 250;
+    --secondary-foreground: 0.85 0.01 250;
+    --muted: 0.28 0.01 250;
+    --muted-foreground: 0.58 0.02 250;
+    --accent: 0.65 0.18 220;
+    --accent-foreground: 0.98 0 0;
+    --destructive: 0.62 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.32 0.01 250;
+    --input: 0.28 0.01 250;
+    --ring: 0.65 0.18 220;
+    --chart-1: 0.65 0.18 220;
+    --chart-2: 0.72 0.16 160;
+    --chart-3: 0.78 0.14 80;
+    --chart-4: 0.68 0.20 300;
+    --chart-5: 0.70 0.18 40;
+    --sidebar: 0.16 0.01 250;
+    --sidebar-foreground: 0.92 0.01 250;
+    --sidebar-primary: 0.65 0.18 220;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.28 0.01 250;
+    --sidebar-accent-foreground: 0.85 0.01 250;
+    --sidebar-border: 0.32 0.01 250;
+    --sidebar-ring: 0.65 0.18 220;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  code, pre, textarea.code-editor, .font-mono {
+    font-family: 'JetBrains Mono', 'Consolas', 'Monaco', 'Courier New', monospace !important;
+  }
+}
+
+@layer utilities {
+  .editor-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .editor-scrollbar::-webkit-scrollbar-track {
+    background: oklch(0.18 0.01 250);
+  }
+  .editor-scrollbar::-webkit-scrollbar-thumb {
+    background: oklch(0.35 0.01 250);
+    border-radius: 4px;
+  }
+  .editor-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.45 0.01 250);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px oklch(0.65 0.18 220 / 0.3);
+  }
+
+  .code-line-numbers {
+    counter-reset: line;
+  }
+  .code-line-numbers > div::before {
+    counter-increment: line;
+    content: counter(line);
+  }
+}

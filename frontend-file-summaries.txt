@@ -1,0 +1,13 @@
+{
+  "frontend/src/index.css": "Global styles with dark code-editor theme using OKLCH color tokens, JetBrains Mono and Inter fonts, custom scrollbar styles, and editor-specific utility classes.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with JetBrains Mono/Inter fonts, editor color tokens (editor-bg, editor-accent, editor-green, etc.), glow/shadow utilities, and fade-in animations.",
+  "frontend/src/App.tsx": "Main app with TanStack Router — replaces the unsafe `throw redirect()` inside the component body with a `useEffect`-based navigation guard in `AuthenticatedLayout`, showing a loading spinner during identity initialization and rendering null while redirecting to prevent the React error boundary from triggering.",
+  "frontend/src/hooks/useQueries.ts": "All React Query hooks for backend operations — adds try/catch error handling in all query functions so backend `Runtime.trap` authorization errors (thrown for anonymous/guest callers) are caught and return safe fallback values (null or []) instead of propagating as unhandled exceptions.",
+  "frontend/src/pages/LoginPage.tsx": "Login page with updated branding showing \"PREMJI COMPILER\" in the header, login card, and footer, plus updated feature highlights mentioning Scanner input support.",
+  "frontend/src/components/Layout.tsx": "Authenticated layout with sticky navbar updated to display \"PREMJI COMPILER\" as the brand name in both the logo area and footer copyright.",
+  "frontend/src/components/ProfileSetupModal.tsx": "First-login profile setup modal that prompts users for their name, prevents flash using isFetched state, and blocks dismissal until saved.",
+  "frontend/src/pages/EditorPage.tsx": "Java code editor page with added stdin/Scanner input panel — detects Scanner usage in code, highlights the input area when Scanner is detected, passes stdin to both Judge0 and Piston APIs, and defaults the editor to a Scanner-based example program.",
+  "frontend/src/pages/HistoryPage.tsx": "Code history page showing all user submissions in reverse chronological order with search, loading skeletons, empty state, and delete functionality.",
+  "frontend/src/components/CodeSnippetCard.tsx": "Expandable code snippet card showing timestamp, line count, code preview (collapsed) or full syntax-styled code with line numbers (expanded), plus copy/delete actions.",
+  "frontend/index.html": "HTML entry point with updated browser tab title set to \"PREMJI COMPILER\"."
+}

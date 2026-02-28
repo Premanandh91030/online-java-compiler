@@ -1,0 +1,47 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-site-title-name-to-premji-compiler-across-the-application-update-the-title-tag-in-frontend-index-html-update-the-logo-brand-text-in-the-navbar-layout-tsx-and-update-the-heading-branding-on-the-login-page-loginpage-tsx",
+      "featureTitle": "Update the site title/name to 'PREMJI COMPILER' across the application: update the <title> tag in frontend/index.html, update the logo/brand text in the navbar (Layout.tsx), and update the heading/branding on the login page (LoginPage.tsx).",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/pages/LoginPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-scanner-based-user-input-support-to-the-java-code-simulator-in-editorpage-tsx-when-the-java-code-contains-import-java-util-scanner-or-uses-scanner-for-reading-input-e-g-nextline-nextint-next-the-ui-should-display-an-input-area-or-prompt-the-user-to-provide-stdin-values-before-execution-these-stdin-values-must-be-passed-to-the-code-execution-api-piston-or-judge0-as-standard-input-so-that-scanner-nextline-scanner-nextint-and-similar-methods-return-the-user-provided-values-at-runtime",
+      "featureTitle": "Add Scanner-based user input support to the Java code simulator in EditorPage.tsx. When the Java code contains 'import java.util.Scanner' or uses 'Scanner' for reading input (e.g., nextLine(), nextInt(), next()), the UI should display an input area or prompt the user to provide stdin values before execution. These stdin values must be passed to the code execution API (Piston or Judge0) as standard input so that Scanner.nextLine(), Scanner.nextInt(), and similar methods return the user-provided values at runtime.",
+      "files": [
+        "frontend/src/pages/EditorPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

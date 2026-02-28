@@ -1,0 +1,59 @@
+{
+  "kind": "build_request",
+  "title": "Support Scanner-based user input and rename site to PREMJI COMPILER",
+  "projectName": "PREMJI COMPILER",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the site title/name to 'PREMJI COMPILER' across the application: update the <title> tag in frontend/index.html, update the logo/brand text in the navbar (Layout.tsx), and update the heading/branding on the login page (LoginPage.tsx).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add the name of the site as PREMJI COMPILER"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The browser tab title reads 'PREMJI COMPILER'",
+        "The navbar logo/brand text displays 'PREMJI COMPILER'",
+        "The login page heading/branding displays 'PREMJI COMPILER'"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add Scanner-based user input support to the Java code simulator in EditorPage.tsx. When the Java code contains 'import java.util.Scanner' or uses 'Scanner' for reading input (e.g., nextLine(), nextInt(), next()), the UI should display an input area or prompt the user to provide stdin values before execution. These stdin values must be passed to the code execution API (Piston or Judge0) as standard input so that Scanner.nextLine(), Scanner.nextInt(), and similar methods return the user-provided values at runtime.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "it not accepting the user input by using scanner"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A stdin/input textarea or field is visible in the editor page for users to enter input values",
+        "When code contains Scanner usage, the input field is prominently shown or highlighted",
+        "User-provided stdin values are sent to the execution API as standard input",
+        "Java code using Scanner (e.g., reading a name or number from input) correctly receives and uses the provided values",
+        "If no input is provided and Scanner is used, the execution does not hang indefinitely — a clear message or empty input is sent"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files listed in frontend.immutablePaths: useInternetIdentity.ts, useActor.ts, main.tsx, frontend/src/components/ui",
+    "All execution must remain client-side/API-based — no JVM installation on the platform"
+  ],
+  "nonGoals": [
+    "Installing or running a real JVM/JDK on the backend",
+    "Supporting languages other than Java",
+    "Changing the authentication or backend data model"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
